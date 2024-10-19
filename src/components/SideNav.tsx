@@ -56,9 +56,9 @@ const Sidebar: React.FC = () => {
 
   return (
     <div>
-      <div className="p-4 text-white w-full flex justify-between text-end  bg-gray-900 fixed z-10  ">
-        <h1 className="md:w-[60%] text-end font-bold text-lg">
-          Rick and Morty characters
+      <div className="p-4 text-white w-full flex justify-between md:justify-center text-end  bg-gray-900 fixed z-10  ">
+        <h1 className="font-bold text-[25px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text animate-gradient font-extrabold drop-shadow-lg">
+          Rick and Morty Characters
         </h1>
 
         <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -67,7 +67,7 @@ const Sidebar: React.FC = () => {
       </div>
 
       <aside
-        className={`w-64 h-screen mt-[3.5rem] lg:mt-0 fixed bg-gray-800 text-white shadow-lg transition-transform duration-300  transform ${
+        className={` w-64 h-screen mt-[60px]  fixed bg-gray-800 text-white shadow-lg transition-transform duration-300  transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
       >

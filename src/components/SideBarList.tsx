@@ -18,7 +18,9 @@ const SidebarList: React.FC<SidebarListProps> = ({ items, onItemClick }) => {
           return (
             <li key={index}>
               <Link
-                href={`/episode/${item.name}?characters=${characterList}`}
+                href={`/episode/${encodeURIComponent(
+                  item.name
+                )}?characters=${characterList}`}
                 className={`flex items-center text-start px-4 py-2 transition-colors ${
                   isActive
                     ? "bg-gray-700 text-white"
