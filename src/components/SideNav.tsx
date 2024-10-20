@@ -56,13 +56,21 @@ const Sidebar: React.FC = () => {
 
   return (
     <div>
-      <div className="p-4 text-white w-full flex justify-between md:justify-center text-end  bg-gray-900 fixed z-10  ">
-        <h1 className="font-bold text-[25px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text animate-gradient font-extrabold drop-shadow-lg">
+      <div className="p-4 text-white w-full flex justify-between lg:justify-center text-end  bg-gray-900 fixed z-10  ">
+        <div
+          onClick={() => {
+            router.push("/");
+            if (isOpen) {
+              setIsOpen(false);
+            }
+          }}
+          className="font-bold text-[25px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text animate-gradient font-extrabold drop-shadow-lg"
+        >
           Rick and Morty Characters
-        </h1>
+        </div>
 
         <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? "Close" : "Menu"}
+          {isOpen ? "Close" : "Episodes"}
         </button>
       </div>
 
